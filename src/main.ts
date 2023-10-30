@@ -179,3 +179,18 @@ avatarForm?.addEventListener('submit', async (evt) => {
   console.log(avatarData);
   checkToken();
 });
+
+
+//TODO: function to take restaurant list and put it in the website
+
+
+//TODO: function to make a dark mode and make it save its property to local storage
+
+
+//TODO: function to open dialogs by clicks
+
+
+//TODO: function to make nav scroll to the page location
+
+
+//TODO: function to fetch leaflet API

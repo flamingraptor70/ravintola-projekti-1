@@ -1,64 +1,106 @@
 @font-face {
-  font-family: 'Pacifico';
-  src: url('./Pacifico-Regular.ttf') format('truetype');
+  font-family: 'Montserrat';
+  src: url('./Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+  font-family: 'Montserrat';
+  text-align: center;
 }
 
 body {
-  font-family: 'Verdana', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Pacifico', cursive;
+body::before {
+  background-color: #fcfcfc;
+  opacity: 0.1;
+  background-image: linear-gradient(#000000 1px, transparent 1px),
+    linear-gradient(to right, #000000 1px, #fcfcfc 1px);
+  background-size: 20px 20px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+div {
+  color: black;
+  opacity: 1 !important;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-form {
-  margin: 0 auto;
-  max-width: 400px;
+.top-container {
+  width: 80%;
+  margin: auto;
+  font-size: x-large;
 }
 
-input {
+.side_bar {
+  z-index: 1;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.side_bar a {
+  font-size: 1.5rem ;
   display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+  color: black;
+  padding: 16px;
+  text-decoration: wavy underline 1.5px;
 }
 
-.button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #ccc;
-  color: #fff;
+.side_bar a:hover:not(.logo) {
+  color: white;
+  background-color: orange;
+}
+
+button {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
   cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
-
-.form-control {
-  display: block;
+button:after {
+  content: "";
+  background-color: orange;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
 }
 
-#avatar-target {
-  max-width: 100%;
-  height: auto;
+button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+footer {
+  bottom: 0;
+}
+
+button.dark_switch {
+  
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 13px 50px 13px;
+  }
 }
