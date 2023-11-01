@@ -1,4 +1,3 @@
-
 import { Menu, WeeklyMenu } from "./interfaces/Menu";
 import { Restaurant } from "./interfaces/Restaurant";
 

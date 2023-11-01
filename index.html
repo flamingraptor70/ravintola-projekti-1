@@ -8,76 +8,103 @@
     <meta name="description" content="Example Vite PWA" />
     <link
     rel="apple-touch-icon"
-      href="/icons/icon-192x192.png"
-      sizes="192x192"
+    href="/icons/icon-192x192.png"
+    sizes="192x192"
     />
     <meta name="theme-color" content="#ffffff" />
     <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
     />
     <script type="module" src="/src/main.ts"></script>
     <script src="https://kit.fontawesome.com/ff00a6193a.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <title>Broke Restaurants</title>
   </head>
 
   <body>
-
     <!--Side Navigation-->
     <aside class="side_bar">
       <a
-        class="logo"
-        href="#"
-        style="color: orange; font-style: italic; font-size: 2rem"
-        >Logo</a
+      class="logo"
+      href="#"
+      id="mainNav"
+      style="color: orange; font-style: italic; font-size: 2rem"
+      >Logo</a
       >
       <hr />
-      <a href="restaurants">Restaurants</a>
-      <a href="location">Locations</a>
-      <a href="aboutus">About US</a>
+      <a href="restaurants" id="ResNav">Restaurants</a>
+      <a href="location" id="LocNav">Locations</a>
+      <a href="aboutus" id="AboutNav">About US</a>
     </aside>
 
-    <!--Top container-->
-    <div class="top-container">
-      <button class="dark_switch" type="button" role="switch" title="toggle dark mode" aria-checked="false"></button>
-      <h1>Student Restaurant app</h1>
-      <h3 style="margin-top: 50px">Restaurant list</h3>
-      <p>Eat healthy and cheap, broke ass</p>
-      <div id="napit">
-        <button id="reset">Show All</button>
-        <button id="sodexo">Sodexo</button>
-        <button id="compass">Compass Group</button>
+    <main>
+      <div class = "checkdiv">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <span class="ball"></span>
+        </label>
       </div>
-    </div>
 
-    <!--Mid container (restaurant list)-->
-    <div class="mid-container">
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Address</th>
-          <th>Company</th>
-        </tr>
-        <!-- add restaurants here -->
-      </table>
-    </div>
+      <!--Top container-->
+      <div class="top-container">
+        <h1>Student Restaurant app</h1>
+        <h3 style="margin-top: 50px">Restaurant list</h3>
+        <p>Eat healthy and cheap, broke ass</p>
+        <div id="napit">
+          <button id="reset">Show All</button>
+          <button id="sodexo">Sodexo</button>
+          <button id="compass">Compass Group</button>
+        </div>
+      </div>
 
-    <!--Bottom container (map / description)-->
-    <div class="bottom-container"></div>
-    <div class="mapcontainer">
-      <p class="maptext2">Please allow location access for the site to work properly!</p>
-      <div id="map"></div>
-      <p class="maptext">Interactive map, click on markers for more info about the restaurant.</p>
-    </div>
+      <!--Mid container (restaurant list)-->
+      <div class="mid-container">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Address</th>
+          </tr>
+          <!-- add restaurants here -->
+        </table>
+      </div>
+
+      <!--Bottom container (map / description)-->
+      <div class="bottom-container"></div>
+      <div class="mapcontainer">
+        <div id="map"></div>
+      </div>
+
+      <div class="aboutcontainer">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, pariatur
+          quas. Praesentium quia rerum nulla, alias commodi distinctio. Unde id
+          fugit nobis voluptates molestiae cupiditate quos impedit laborum a
+          neque harum, voluptatum sapiente tempore repellendus corrupti dicta
+          doloremque ipsum animi reiciendis? Dolor nulla rerum neque voluptatem,
+          libero rem, dignissimos nesciunt in sint consequuntur quod asperiores
+          praesentium mollitia ab quibusdam perferendis. Quasi ea ipsa quis
+          assumenda commodi! Nesciunt repellat eaque saepe deleniti pariatur,
+          vitae deserunt quos, quas nulla reprehenderit aperiam delectus amet
+          consequuntur nostrum? Corporis possimus, deleniti dolor quaerat ipsa,
+          consequuntur laudantium in at eius iusto accusantium neque
+          reprehenderit, provident facere!
+        </p>
+      </div>
+      <hr />
+      <footer>Footer text</footer>
+    </main>
 
     <!-- modal -->
     <!--Login dialog-->
     <dialog id="loginDialog">
-      <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <button id="loginClose">Close</button>
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button id="loginClose">Close</button>
     </dialog>
 
     <!--Restaurant dialog-->
@@ -85,7 +112,5 @@
       <!-- add restaurant info here when restaurant is clicked -->
       <button id="apiMenuClose">Close</button>
     </dialog>
-
-    <footer style="background-color:#f1f1f1;">Footer text</footer>
   </body>
 </html>
