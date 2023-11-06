@@ -33,14 +33,14 @@ table {
 td {
   background-color: whitesmoke;
   font-weight: 400;
-  font-size: 1.2rem;
-  padding: 20px;
+  font-size: 1.1rem;
+  padding: .4em 1em;
   text-align: left;
   border: 1px solid black;
 }
 
 td:hover {
-  background-color: rgb(255, 210, 127); /* Change the background color */
+  background-color: rgb(255, 210, 127);
 }
 
 .menutop {
@@ -236,7 +236,53 @@ footer {
 /*Dark mode*/
 
 body.dark {
-  background-color: grey;
+  background-color: #161616;
   color: white;
+}
+
+body.dark div {
+  color: whitesmoke;
+}
+
+body.dark footer {
+  color: whitesmoke
+}
+
+body.dark dialog {
+  color: whitesmoke;
+}
+
+body.dark .side_bar {
+  background-color: #111;
+}
+
+body.dark .side_bar a {
+  color: white;
+}
+
+body.dark table {
+  border-color: orange;
+}
+
+body.dark td {
+  background-color: #222222;
+  border-color: orange ;
+}
+
+body.dark td:hover {
+  color: black;
+  background-color: rgb(255, 210, 127);
+}
+
+body.dark dialog {
+  background-color: #222222;
+}
+
+body.dark button {
+  border-color: white;
+}
+
+body.dark .leaflet-popup-content{
+  color: black !important;
 }
 

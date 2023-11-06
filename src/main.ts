@@ -345,16 +345,18 @@ theme && document.body.classList.add("dark");
 
 
 // Addd an event listener to dark mode
-checkbox.addEventListener("change", () => {
-  document.body.classList.toggle("dark");
+if (checkbox) {
+  checkbox.addEventListener("change", () => {
+    document.body.classList.toggle("dark");
 
-  //Darkmode to LocalStorage
-  if (document.body.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  } else {
-  localStorage.removeItem("theme")
-  }
-})
+    //Darkmode to LocalStorage
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.removeItem("theme")
+    }
+  });
+}
 
 
 
